@@ -36,4 +36,11 @@ class ParamsExamplesController < ApplicationController
     render json: {message: "The url segment value is #{input_value}"}
   end
 
+  def sum_nums
+    number1 = params[:number1].to_i
+    number2 = params[:number2].to_i
+    sum = number1 + number2
+    render json: {message: "Your sum is: #{sum}"}
+  end
+
 end
