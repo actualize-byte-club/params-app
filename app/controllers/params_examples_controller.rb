@@ -31,4 +31,9 @@ class ParamsExamplesController < ApplicationController
     render json: {message: message}
   end
 
+  def segment_params
+    input_value = params[:wildcard]
+    render json: {message: "The url segment value is #{input_value}"}
+  end
+
 end
