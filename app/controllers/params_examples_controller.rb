@@ -18,7 +18,7 @@ class ParamsExamplesController < ApplicationController
     render json: {message: message}
   end
 
-  def guess_query
+  def guess_method
     user_guess = params[:user_guess].to_i
     winning_number = 36
     if user_guess > winning_number
@@ -46,6 +46,16 @@ class ParamsExamplesController < ApplicationController
   def body_params
     secret_info = params[:secret_info]
     render json: {message: "The secret info is #{secret_info}."}
+  end
+
+  def credentials
+    username = params[:username]
+    password = params[:password]
+    message = "Invalid credentials"
+    if username == "hugh" && password == "swordfish"
+      message = "Valid credentials"
+    end
+    render json: {message: message}
   end
 
 end

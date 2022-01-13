@@ -8,3 +8,22 @@ Content-Type: application/json
 {
   "secret_info": "Carrot"
 }
+
+###
+
+POST http://localhost:3000/guess_body
+Content-Type: application/json
+
+{
+  "user_guess": 36
+}
+
+###
+
+POST http://localhost:3000/credentials
+Content-Type: application/json
+
+{
+  "username": "hugh",
+  "password": "swordfish"
+}
