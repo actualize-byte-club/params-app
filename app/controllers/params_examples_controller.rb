@@ -43,4 +43,9 @@ class ParamsExamplesController < ApplicationController
     render json: {message: "Your sum is: #{sum}"}
   end
 
+  def body_params
+    secret_info = params[:secret_info]
+    render json: {message: "The secret info is #{secret_info}."}
+  end
+
 end

@@ -1,0 +1,10 @@
+GET http://localhost:3000/name?my_name=dani
+
+###
+
+POST http://localhost:3000/body_params
+Content-Type: application/json
+
+{
+  "secret_info": "Carrot"
+}
